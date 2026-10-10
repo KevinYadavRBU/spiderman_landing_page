@@ -1,0 +1,251 @@
+
+
+.timeline-header {
+  position: relative;
+  z-index: 20;
+  background-color: #060604;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: auto;
+  padding-inline: 1rem;
+}
+
+
+
+.timeline-hero {
+  background-color: #060604;
+  padding: 9rem 0 4rem;
+  text-align: center;
+}
+
+.timeline-hero .eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 999px;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.timeline-title {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 800;
+  color: var(--white);
+  font-size: 2.75rem;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.25rem;
+}
+
+.timeline-title span {
+  color: var(--primary-color);
+}
+
+.timeline-hero .body-text {
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.75rem;
+}
+
+
+
+.timeline-wrap {
+  background-color: #060604;
+  padding: 2rem 0 5rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin: auto;
+  padding-left: 2.25rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.4rem;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(237, 29, 36, 0.05),
+    var(--primary-color-dark) 8%,
+    var(--primary-color-dark) 92%,
+    rgba(237, 29, 36, 0.05)
+  );
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+
+.tl-dot {
+  position: absolute;
+  top: 0.4rem;
+  left: -2.25rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #060604;
+  border: 2px solid var(--primary-color);
+}
+
+.tl-dot.pulse {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 0 0 rgba(237, 29, 36, 0.6);
+  animation: tl-pulse 2s infinite;
+}
+
+@keyframes tl-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(237, 29, 36, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(237, 29, 36, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(237, 29, 36, 0);
+  }
+}
+
+.tl-card {
+  position: relative;
+  background-color: #0e0e0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.tl-item:hover .tl-card {
+  border-color: rgba(237, 29, 36, 0.5);
+  transform: translateX(4px);
+}
+
+
+.tl-item::after {
+  content: attr(data-era);
+  position: absolute;
+  top: 1.6rem;
+  right: 1.5rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  white-space: nowrap;
+  display: none;
+}
+
+@media (width > 480px) {
+  .tl-item::after {
+    display: block;
+  }
+}
+
+.tl-year {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  letter-spacing: 0.04em;
+}
+
+.tl-card h3 {
+  font-family: "Roboto Slab", sans-serif;
+  color: var(--white);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tl-card p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6rem;
+  font-size: 0.95rem;
+}
+
+.tl-card.highlight {
+  background-color: #1a0605;
+  border-color: var(--primary-color);
+}
+
+.tl-item.current .tl-dot {
+  width: 16px;
+  height: 16px;
+  left: -2.3rem;
+}
+
+.tl-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 2px;
+}
+
+.tl-link:hover {
+  color: var(--primary-color);
+}
+
+
+
+.final-cta {
+  background-color: var(--primary-color);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.final-cta h2 {
+  font-family: "Roboto Slab", sans-serif;
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.final-cta .btn {
+  background-color: #060604;
+  margin-bottom: 0;
+}
+
+.final-cta .btn:hover {
+  background-color: #1a1a17;
+}
+
+
+
+@media (width > 640px) {
+  .timeline-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (width > 768px) {
+  .timeline-header nav {
+    padding-inline: 1rem;
+  }
+
+  .timeline-hero {
+    padding-top: 3rem;
+  }
+}
