@@ -10,7 +10,7 @@ if (menuBtn && navLinks) {
     const isOpen = navLinks.classList.contains("open");
     menuBtnIcon.setAttribute(
       "class",
-      isOpen ? "ri-close-line" : "ri-menu-3-line"
+      isOpen ? "ri-close-line" : "ri-menu-3-line",
     );
   });
 
@@ -21,7 +21,10 @@ if (menuBtn && navLinks) {
   });
 }
 
-if (typeof ScrollReveal !== "undefined" && document.querySelector(".header__container")) {
+if (
+  typeof ScrollReveal !== "undefined" &&
+  document.querySelector(".header__container")
+) {
   const scrollRevealOption = {
     distance: "50px",
     origin: "bottom",

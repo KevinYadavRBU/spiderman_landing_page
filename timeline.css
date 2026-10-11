@@ -1,5 +1,3 @@
-
-
 .timeline-header {
   position: relative;
   z-index: 20;
@@ -12,8 +10,6 @@
   margin: auto;
   padding-inline: 1rem;
 }
-
-
 
 .timeline-hero {
   background-color: #060604;
@@ -54,8 +50,6 @@
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.75rem;
 }
-
-
 
 .timeline-wrap {
   background-color: #060604;
@@ -129,14 +123,15 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0.5rem;
   padding: 1.5rem 1.5rem 1.5rem 1.75rem;
-  transition: border-color 0.3s, transform 0.3s;
+  transition:
+    border-color 0.3s,
+    transform 0.3s;
 }
 
 .tl-item:hover .tl-card {
   border-color: rgba(237, 29, 36, 0.5);
   transform: translateX(4px);
 }
-
 
 .tl-item::after {
   content: attr(data-era);
@@ -208,8 +203,6 @@
   color: var(--primary-color);
 }
 
-
-
 .final-cta {
   background-color: var(--primary-color);
   padding: 4rem 0;
@@ -231,8 +224,6 @@
 .final-cta .btn:hover {
   background-color: #1a1a17;
 }
-
-
 
 @media (width > 640px) {
   .timeline-title {
